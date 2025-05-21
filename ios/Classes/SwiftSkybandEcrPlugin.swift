@@ -91,7 +91,7 @@ class SKBCoreServices: NSObject {
 }
 #else
 // Try both import formats to ensure compatibility
-@import SkyBandECRSDK;
+import SkyBandECRSDK;
 #endif
 
 public class SwiftSkybandEcrPlugin: NSObject, FlutterPlugin, SocketConnectionDelegate {
@@ -288,7 +288,7 @@ extension SwiftSkybandEcrPlugin {
     // For simulator builds, we need these to be marked with @objc and be optional
     // For real device builds, these match the actual SDK methods
     
-    @objc public func socketConnectionStream(_ connection: SKBCoreServices, didReceiveData responseData: NSMutableDictionary) {
+    @objc func socketConnectionStream(_ connection: SKBCoreServices, didReceiveData responseData: NSMutableDictionary) {
         if let result = paymentResult {
             result(responseData as? [String: Any])
             paymentResult = nil
@@ -298,19 +298,19 @@ extension SwiftSkybandEcrPlugin {
         eventSink?(["response": responseData])
     }
     
-    @objc public func socketConnectionStreamDidFailToConnect(_ connection: SKBCoreServices) {
+    @objc func socketConnectionStreamDidFailToConnect(_ connection: SKBCoreServices) {
         eventSink?(["status": "disconnected"])
     }
     
-    @objc public func socketConnectionStreamDidConnect(_ connection: SKBCoreServices) {
+    @objc  func socketConnectionStreamDidConnect(_ connection: SKBCoreServices) {
         eventSink?(["status": "connected"])
     }
     
-    @objc public func socketConnectionStreamDidDisconnect(_ connection: SKBCoreServices, willReconnectAutomatically: Bool) {
+    @objc  func socketConnectionStreamDidDisconnect(_ connection: SKBCoreServices, willReconnectAutomatically: Bool) {
         eventSink?(["status": "disconnected", "willReconnect": willReconnectAutomatically])
     }
     
-    @objc public func socketConnectionStream(_ connection: SKBCoreServices, didSendString string: String) {
+    @objc  func socketConnectionStream(_ connection: SKBCoreServices, didSendString string: String) {
         // Optional method implementation
         print("Did send string: \(string)")
     }
