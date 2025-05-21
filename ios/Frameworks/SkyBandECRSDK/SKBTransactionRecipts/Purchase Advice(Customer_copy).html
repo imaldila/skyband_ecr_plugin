@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            line-height: 1.3;
+        }
+
+        .container {
+            padding: 5%;
+        }
+
+        .header {
+            text-align: center;
+        }
+
+        .float-right {
+            float: right;
+        }
+
+        .float-left {
+            float: left;
+        }
+
+        .p-10 {
+            padding: 10px 0px;
+        }
+
+        .clear-fix {
+            overflow: auto;
+        }
+
+        .serial {
+            font-family: monospace;
+        }
+
+        .serial>small {
+            display: block;
+        }
+
+        bdo {
+            text-align: right !important;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .caps {
+            text-transform: uppercase;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+
+        .b {
+            font-weight: bold;
+        }
+
+        .m-30 {
+            margin-top: 30px;
+        }
+    
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .RetailerCopyClass {
+		     width: 100%;
+	         text-align: center;
+	         margin-top: 5%;
+         }
+		.btnRetailerClass {
+	         padding: 8px;
+	         background-color: #03a9f4;
+	         color: black;
+	         font-weight: bold;
+	         border: none;
+	         border-radius: 5px;
+         }
+    </style>
+    <script>
+         var retCopy = "retailer_copy";
+         var custCopy = "customer_copy";
+         function toggleReceipt(receiptType) {
+             if (receiptType == "showCustCopy") {
+                 document.getElementById(retCopy).style.display = "none";
+                 document.getElementById(custCopy).style.display = "block";
+             }
+             else {
+                 document.getElementById(retCopy).style.display = "block";
+                 document.getElementById(custCopy).style.display = "none";
+             }
+         }
+    </script>
+</head>
+
+<body>
+    <div id="retailer_copy" class="container">
+        <div class="header">
+            <h3>MerchantName_Arebic</h3>
+            <h3>Merchant Name</h3>
+            <h3>MerchantAddress_Arebic</h3>
+            <h5>Merchant Address</h5>
+        </div>
+        <div class="p-10 clear-fix">
+            <div class="float-left"><p style="font-size:22px">currentDate</p></div>
+            <div class="float-right"><p style="font-size:22px">currentTime</p></div>
+        </div>
+        <div class="serial">
+            <small><div class="flex-container"><div>RAJB</div> <div>&nbsp&nbsp MID &nbsp&nbsp</div> <div>TID</div></div></small>
+            <small><div class="flex-container"><div>Buzzcode</div> <div>&nbsp&nbsp  StanNo &nbsp</div> <div>ApplicationVersion</div> <div>&nbsp &nbsp&nbsp</div> <div>RRN</div></div></small>
+        </div>
+        <bdo dir="rtl" class="b">SchemeText_Arabic</bdo>
+        <div class="b">Scheme Text</div>
+        <bdo dir="rtl" class="b">
+            إشعار بالشراء
+        </bdo>
+        <div class="caps">
+            purchase advice
+        </div>
+        <div class="clear-fix">
+            <div class="float-left">panNumber</div>
+            <div class="float-right">ExpiryDate</div>
+        </div>
+        <bdo dir="rtl" class="b">
+            مبلغ الإشعار
+        </bdo>
+
+        <div><h4 class="float-left">arabicSAR</h4><h2>amountSAR</h2></div>
+        <h4 class="caps">purchase advice amount</h4>
+        <div class="text-right caps b"><h2>
+            sar CurrentAmount
+        </h2></div>
+        <div class="text-center">
+            <div class="b">
+                مقبولة
+            </div>
+            <div class="b caps">
+                approved
+            </div>
+            <div>DisclaimerText_Arabic</div>
+            <small class="caps">Disclaimer Text</small>
+        </div>
+        <div class="text-center">
+            <div class="clear-fix">
+                <div class="float-left b">approovalcodearabic</div>
+                <div class="float-right b">رمز الموافقة</div>
+            </div>
+            <div class="clear-fix b">
+                <div class="float-left caps">
+                    approval code
+                </div>
+                <div class="float-right caps">
+                    authCode
+                </div>
+            </div>
+            <div class="clear-fix">
+                <div class="float-left">currentDate</div>
+                <div class="float-right">currentTime</div>
+            </div>
+            <div>
+                شكرا لاستخدامكم مدى
+            </div>
+            <div>
+                THANK YOU FOR USING SchemeLabel
+            </div>
+            <div>
+                يرجي الاحتفاظ بالإيصال
+            </div>
+            <div class="caps">please retain receipt</div>
+            <div class="b">** نسخة التاجر **</div>
+            <div class="b caps">** retailer copy **</div>
+            <div class="serial">
+                <small><div class="flex-container"><div>CONTACTLESS</div> <div>ResponseCode</div> <div>&nbsp AIDaid &nbsp</div> <div>TVR</div></div></small>
+                <small><div class="flex-container"><div>CVR</div> <div>&nbsp CID &nbsp</div> <div>applicationCryptogram</div> <div>&nbsp KERNEL-ID</div></div></small>
+                <small><div class="flex-container"><div>PAR</div> <div>PANSUFFIX</div> <div>&nbsp TSI</div></div></small>
+            </div>
+        </div>
+        <div class="RetailerCopyClass">
+            <button onclick="toggleReceipt('showCustCopy')" class="btnRetailerClass">Customer Copy</button>
+         </div>
+    </div>
+    <!--div><hr style="border-top: 2px dashed black;color:transparent;"/></div-->
+    <div id="customer_copy" class="container" style="display:none;">
+        <div class="header">
+            <h3>MerchantName_Arebic</h3>
+            <h3>Merchant Name</h3>
+            <h3>MerchantAddress_Arebic</h3>
+            <h5>Merchant Address</h5>
+        </div>
+        <div class="p-10 clear-fix">
+            <div class="float-left"><p style="font-size:22px">currentDate</p></div>
+            <div class="float-right"><p style="font-size:22px">currentTime</p></div>
+        </div>
+        <div class="serial">
+            <small><div class="flex-container"><div>RAJB</div> <div>&nbsp&nbsp MID &nbsp&nbsp</div> <div>TID</div></div></small>
+            <small><div class="flex-container"><div>Buzzcode</div> <div>&nbsp&nbsp  StanNo &nbsp</div> <div>ApplicationVersion</div> <div>&nbsp &nbsp&nbsp</div> <div>RRN</div></div></small>
+        </div>
+        <bdo dir="rtl" class="b">SchemeText_Arabic</bdo>
+        <div class="b">Scheme Text</div>
+        <bdo dir="rtl" class="b">
+            إشعار بالشراء
+        </bdo>
+        <div class="caps">
+            purchase advice
+        </div>
+        <div class="clear-fix">
+            <div class="float-left">panNumber</div>
+            <div class="float-right">ExpiryDate</div>
+        </div>
+        <bdo dir="rtl" class="b">
+            مبلغ الإشعار
+        </bdo>
+
+        <div><h4 class="float-left">arabicSAR</h4><h2>amountSAR</h2></div>
+        <h4 class="caps">purchase advice amount</h4>
+        <div class="text-right caps b"><h2>
+            sar CurrentAmount
+        </h2></div>
+        <div class="text-center">
+            <div class="b">
+                مقبولة
+            </div>
+            <div class="b caps">
+                approved
+            </div>
+            <div>DisclaimerText_Arabic</div>
+            <small class="caps">Disclaimer Text</small>
+        </div>
+        <div class="text-center">
+            <div class="clear-fix">
+                <div class="float-left b">approovalcodearabic</div>
+                <div class="float-right b">رمز الموافقة</div>
+            </div>
+            <div class="clear-fix b">
+                <div class="float-left caps">
+                    approval code
+                </div>
+                <div class="float-right caps">
+                    authCode
+                </div>
+            </div>
+            <div class="clear-fix">
+                <div class="float-left">currentDate</div>
+                <div class="float-right">currentTime</div>
+            </div>
+            <div>
+                شكرا لاستخدامكم مدى
+            </div>
+            <div>
+                THANK YOU FOR USING SchemeLabel
+            </div>
+            <div>
+                يرجي الاحتفاظ بالإيصال
+            </div>
+            <div class="caps">please retain receipt</div>
+            <div class="b">** نسخة العميل **</div>
+            <div class="b caps">** customer copy **</div>
+            <div class="serial">
+                <small><div class="flex-container"><div>CONTACTLESS</div> <div>ResponseCode</div> <div>&nbsp AIDaid &nbsp</div> <div>TVR</div></div></small>
+                <small><div class="flex-container"><div>CVR</div> <div>&nbsp CID &nbsp</div> <div>applicationCryptogram</div> <div>&nbsp KERNEL-ID</div></div></small>
+                <small><div class="flex-container"><div>PAR</div> <div>PANSUFFIX</div> <div>&nbsp TSI</div></div></small>
+            </div>
+        </div>
+        <div class="RetailerCopyClass">
+            <button onclick="toggleReceipt('showRetCopy')" class="btnRetailerClass">Retailer Copy</button>
+        </div>
+    </div>
+</body>
+
+</html>

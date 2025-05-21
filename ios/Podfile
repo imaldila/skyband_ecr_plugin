@@ -1,0 +1,9 @@
+platform :ios, '12.0'
+
+target 'skyband_ecr_plugin' do
+  use_frameworks!
+  use_modular_headers!
+
+  # Add the SkyBandECRSDK framework
+  pod 'SkyBandECRSDK', :path => 'SkyBandECRSDK'
+end 
