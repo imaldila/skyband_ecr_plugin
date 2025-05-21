@@ -20,7 +20,7 @@ Add this to your package's `pubspec.yaml` file:
 dependencies:
   skyband_ecr_plugin:
     git:
-      url: https://github.com/yourusername/skyband_ecr_plugin.git
+      url: https://github.com/imaldila/skyband_ecr_plugin.git
       ref: main
 ```
 
