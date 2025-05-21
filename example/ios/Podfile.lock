@@ -2,7 +2,7 @@ PODS:
   - Flutter (1.0.0)
   - integration_test (0.0.1):
     - Flutter
-  - skyband_ecr_plugin (0.0.1):
+  - skyband_ecr_plugin (1.0.0):
     - Flutter
 
 DEPENDENCIES:
@@ -21,7 +21,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
   integration_test: 252f60fa39af5e17c3aa9899d35d908a0721b573
-  skyband_ecr_plugin: 98d70dd5a00cfca09693a8af07d51882cd2438ce
+  skyband_ecr_plugin: 29293759c18f8c38afc860532f41af74a495ef62
 
 PODFILE CHECKSUM: 4305caec6b40dde0ae97be1573c53de1882a07e5
 

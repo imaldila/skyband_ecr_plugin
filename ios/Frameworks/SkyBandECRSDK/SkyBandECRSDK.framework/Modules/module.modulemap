@@ -1,0 +1,6 @@
+framework module SkyBandECRSDK {
+  umbrella header "SkyBandECRSDK.h"
+
+  export *
+  module * { export * }
+}

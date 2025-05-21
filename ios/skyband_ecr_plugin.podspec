@@ -16,7 +16,6 @@ A Flutter plugin for integrating SkyBand ECR devices.
   s.source_files     = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'
-  s.dependency 'SkyBandECRSDK', '3.5.0'
   s.platform = :ios, '12.0'
 
   # Flutter.framework does not contain a i386 slice.
@@ -29,5 +28,5 @@ A Flutter plugin for integrating SkyBand ECR devices.
   # see https://developer.apple.com/documentation/bundleresources/privacy_manifest_files
   # s.resource_bundles = {'skyband_ecr_plugin_privacy' => ['Resources/PrivacyInfo.xcprivacy']}
 
-  s.vendored_frameworks = 'frameworks/SkyBandECRSDK/SkyBandECRSDK.framework'
+  s.vendored_frameworks = 'Frameworks/SkyBandECRSDK/SkyBandECRSDK.framework'
 end
