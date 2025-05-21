@@ -1,613 +1,1575 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 50;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		570D6D3E24090A9300F4DBE7 /* SBCoreECR.c in Sources */ = {isa = PBXBuildFile; fileRef = 570D6D3C24090A9300F4DBE7 /* SBCoreECR.c */; };
-		570D6D3F24090A9300F4DBE7 /* SBCoreECR.h in Headers */ = {isa = PBXBuildFile; fileRef = 570D6D3D24090A9300F4DBE7 /* SBCoreECR.h */; };
-		570D6D5024090AF900F4DBE7 /* Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 570D6D4E24090AF900F4DBE7 /* Utilities.h */; };
-		570D6D5124090AF900F4DBE7 /* Utilities.c in Sources */ = {isa = PBXBuildFile; fileRef = 570D6D4F24090AF900F4DBE7 /* Utilities.c */; };
-		573EB97223F55422006F383D /* SkyBandECRSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573EB96823F55421006F383D /* SkyBandECRSDK.framework */; };
-		573EB97723F55422006F383D /* SkyBandECRSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 573EB97623F55422006F383D /* SkyBandECRSDKTests.m */; };
-		573EB97923F55422006F383D /* SkyBandECRSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 573EB96B23F55421006F383D /* SkyBandECRSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5763A8CD23F6DA7D00790E94 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5763A8CC23F6DA7D00790E94 /* Security.framework */; };
-		5763A8CF23F6DAA900790E94 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5763A8CE23F6DAA900790E94 /* libiconv.tbd */; };
-		5763A8D123F6DAB900790E94 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5763A8D023F6DAB900790E94 /* libz.tbd */; };
-		5763A8D323F6DAC200790E94 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5763A8D223F6DAC200790E94 /* CFNetwork.framework */; };
-		578324552413605500B6BFA2 /* ECRSrc.h in Headers */ = {isa = PBXBuildFile; fileRef = 578324532413605500B6BFA2 /* ECRSrc.h */; };
-		578324562413605500B6BFA2 /* ECRSrc.c in Sources */ = {isa = PBXBuildFile; fileRef = 578324542413605500B6BFA2 /* ECRSrc.c */; };
-		57E41CAB240E3057007B44A0 /* SKBCoreServices.h in Headers */ = {isa = PBXBuildFile; fileRef = 57E41CAA240E3057007B44A0 /* SKBCoreServices.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		57E41CAD240E305F007B44A0 /* SKBCoreServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E41CAC240E305F007B44A0 /* SKBCoreServices.m */; };
-		B10A6AA424494016004EA1D1 /* Pre-Extension(Customer_copy).html in Resources */ = {isa = PBXBuildFile; fileRef = B10A6A8C24494000004EA1D1 /* Pre-Extension(Customer_copy).html */; };
-		B10A6AA524494016004EA1D1 /* Cash_Advance(Customer_copy).html in Resources */ = {isa = PBXBuildFile; fileRef = B10A6A8D24494003004EA1D1 /* Cash_Advance(Customer_copy).html */; };
-		B10A6AAA24494016004EA1D1 /* Refund(customer_copy).html in Resources */ = {isa = PBXBuildFile; fileRef = B10A6A9224494006004EA1D1 /* Refund(customer_copy).html */; };
-		B10A6AAE24494016004EA1D1 /* Parameter download.html in Resources */ = {isa = PBXBuildFile; fileRef = B10A6A9624494007004EA1D1 /* Parameter download.html */; };
-		B10A6AB024494016004EA1D1 /* Bill Pyment(Customer_copy).html in Resources */ = {isa = PBXBuildFile; fileRef = B10A6A9824494009004EA1D1 /* Bill Pyment(Customer_copy).html */; };
-		B10A6AB224494016004EA1D1 /* Pre-Auth(Customer_copy).html in Resources */ = {isa = PBXBuildFile; fileRef = B10A6A9A2449400C004EA1D1 /* Pre-Auth(Customer_copy).html */; };
-		B10A6AB824494016004EA1D1 /* Purchase Advice(Customer_copy).html in Resources */ = {isa = PBXBuildFile; fileRef = B10A6AA024494011004EA1D1 /* Purchase Advice(Customer_copy).html */; };
-		B10A6AB924494016004EA1D1 /* Pre-void(Customer_copy).html in Resources */ = {isa = PBXBuildFile; fileRef = B10A6AA124494012004EA1D1 /* Pre-void(Customer_copy).html */; };
-		B10A6ABB24494016004EA1D1 /* Purchase cashback(customer copy)).html in Resources */ = {isa = PBXBuildFile; fileRef = B10A6AA324494015004EA1D1 /* Purchase cashback(customer copy)).html */; };
-		B13856802493295A009B2729 /* PosTable.html in Resources */ = {isa = PBXBuildFile; fileRef = B138567E24932959009B2729 /* PosTable.html */; };
-		B13856812493295A009B2729 /* ReconcilationTable.html in Resources */ = {isa = PBXBuildFile; fileRef = B138567F24932959009B2729 /* ReconcilationTable.html */; };
-		B147C4E82451E7CA00227BA6 /* Purchase(customer_copy).html in Resources */ = {isa = PBXBuildFile; fileRef = B147C4E72451E7C900227BA6 /* Purchase(customer_copy).html */; };
-		B18F789F245ABB9600D9C040 /* Summary.html in Resources */ = {isa = PBXBuildFile; fileRef = B18F789E245ABB9600D9C040 /* Summary.html */; };
-		B18F78A1245ABBD600D9C040 /* Summary_Report.html in Resources */ = {isa = PBXBuildFile; fileRef = B18F78A0245ABBD600D9C040 /* Summary_Report.html */; };
-		B18F78A3245AE3B300D9C040 /* Reconcilation.html in Resources */ = {isa = PBXBuildFile; fileRef = B18F78A2245AE3B200D9C040 /* Reconcilation.html */; };
-		B18F78A5245AE3EB00D9C040 /* Detail_Report.html in Resources */ = {isa = PBXBuildFile; fileRef = B18F78A4245AE3EB00D9C040 /* Detail_Report.html */; };
-		B18F78A7245AE5D600D9C040 /* Reversal(Customer_copy).html in Resources */ = {isa = PBXBuildFile; fileRef = B18F78A6245AE5D600D9C040 /* Reversal(Customer_copy).html */; };
-		B1FC171D24AE09260086A297 /* madaHostTable.html in Resources */ = {isa = PBXBuildFile; fileRef = B1FC171924AE09250086A297 /* madaHostTable.html */; };
-		B1FC171E24AE09260086A297 /* ReconcilationTable1.html in Resources */ = {isa = PBXBuildFile; fileRef = B1FC171A24AE09250086A297 /* ReconcilationTable1.html */; };
-		B1FC171F24AE09260086A297 /* PosTerminalDetails.html in Resources */ = {isa = PBXBuildFile; fileRef = B1FC171B24AE09260086A297 /* PosTerminalDetails.html */; };
-		B1FC172024AE09260086A297 /* PosTableRunning.html in Resources */ = {isa = PBXBuildFile; fileRef = B1FC171C24AE09260086A297 /* PosTableRunning.html */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		573EB97323F55422006F383D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 573EB95F23F55421006F383D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 573EB96723F55421006F383D;
-			remoteInfo = SkyBandECRSDK;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		570D6D3C24090A9300F4DBE7 /* SBCoreECR.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SBCoreECR.c; sourceTree = "<group>"; };
-		570D6D3D24090A9300F4DBE7 /* SBCoreECR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBCoreECR.h; sourceTree = "<group>"; };
-		570D6D4E24090AF900F4DBE7 /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
-		570D6D4F24090AF900F4DBE7 /* Utilities.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Utilities.c; sourceTree = "<group>"; };
-		573EB96823F55421006F383D /* SkyBandECRSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SkyBandECRSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		573EB96B23F55421006F383D /* SkyBandECRSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SkyBandECRSDK.h; sourceTree = "<group>"; };
-		573EB96C23F55421006F383D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		573EB97123F55422006F383D /* SkyBandECRSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkyBandECRSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		573EB97623F55422006F383D /* SkyBandECRSDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkyBandECRSDKTests.m; sourceTree = "<group>"; };
-		573EB97823F55422006F383D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5763A8CC23F6DA7D00790E94 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
-		5763A8CE23F6DAA900790E94 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/libiconv.tbd; sourceTree = DEVELOPER_DIR; };
-		5763A8D023F6DAB900790E94 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/libz.tbd; sourceTree = DEVELOPER_DIR; };
-		5763A8D223F6DAC200790E94 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
-		578324532413605500B6BFA2 /* ECRSrc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECRSrc.h; sourceTree = "<group>"; };
-		578324542413605500B6BFA2 /* ECRSrc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ECRSrc.c; sourceTree = "<group>"; };
-		57E41CAA240E3057007B44A0 /* SKBCoreServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKBCoreServices.h; sourceTree = "<group>"; };
-		57E41CAC240E305F007B44A0 /* SKBCoreServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKBCoreServices.m; sourceTree = "<group>"; };
-		B10A6A8C24494000004EA1D1 /* Pre-Extension(Customer_copy).html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "Pre-Extension(Customer_copy).html"; sourceTree = "<group>"; };
-		B10A6A8D24494003004EA1D1 /* Cash_Advance(Customer_copy).html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "Cash_Advance(Customer_copy).html"; sourceTree = "<group>"; };
-		B10A6A9224494006004EA1D1 /* Refund(customer_copy).html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "Refund(customer_copy).html"; sourceTree = "<group>"; };
-		B10A6A9624494007004EA1D1 /* Parameter download.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "Parameter download.html"; sourceTree = "<group>"; };
-		B10A6A9824494009004EA1D1 /* Bill Pyment(Customer_copy).html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "Bill Pyment(Customer_copy).html"; sourceTree = "<group>"; };
-		B10A6A9A2449400C004EA1D1 /* Pre-Auth(Customer_copy).html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "Pre-Auth(Customer_copy).html"; sourceTree = "<group>"; };
-		B10A6AA024494011004EA1D1 /* Purchase Advice(Customer_copy).html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "Purchase Advice(Customer_copy).html"; sourceTree = "<group>"; };
-		B10A6AA124494012004EA1D1 /* Pre-void(Customer_copy).html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "Pre-void(Customer_copy).html"; sourceTree = "<group>"; };
-		B10A6AA324494015004EA1D1 /* Purchase cashback(customer copy)).html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "Purchase cashback(customer copy)).html"; sourceTree = "<group>"; };
-		B138567E24932959009B2729 /* PosTable.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = PosTable.html; sourceTree = "<group>"; };
-		B138567F24932959009B2729 /* ReconcilationTable.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ReconcilationTable.html; sourceTree = "<group>"; };
-		B147C4E72451E7C900227BA6 /* Purchase(customer_copy).html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "Purchase(customer_copy).html"; sourceTree = "<group>"; };
-		B18F789E245ABB9600D9C040 /* Summary.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Summary.html; sourceTree = "<group>"; };
-		B18F78A0245ABBD600D9C040 /* Summary_Report.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Summary_Report.html; sourceTree = "<group>"; };
-		B18F78A2245AE3B200D9C040 /* Reconcilation.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Reconcilation.html; sourceTree = "<group>"; };
-		B18F78A4245AE3EB00D9C040 /* Detail_Report.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Detail_Report.html; sourceTree = "<group>"; };
-		B18F78A6245AE5D600D9C040 /* Reversal(Customer_copy).html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "Reversal(Customer_copy).html"; sourceTree = "<group>"; };
-		B1FC171924AE09250086A297 /* madaHostTable.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = madaHostTable.html; sourceTree = "<group>"; };
-		B1FC171A24AE09250086A297 /* ReconcilationTable1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ReconcilationTable1.html; sourceTree = "<group>"; };
-		B1FC171B24AE09260086A297 /* PosTerminalDetails.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = PosTerminalDetails.html; sourceTree = "<group>"; };
-		B1FC171C24AE09260086A297 /* PosTableRunning.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = PosTableRunning.html; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		573EB96523F55421006F383D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5763A8D323F6DAC200790E94 /* CFNetwork.framework in Frameworks */,
-				5763A8D123F6DAB900790E94 /* libz.tbd in Frameworks */,
-				5763A8CF23F6DAA900790E94 /* libiconv.tbd in Frameworks */,
-				5763A8CD23F6DA7D00790E94 /* Security.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		573EB96E23F55422006F383D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				573EB97223F55422006F383D /* SkyBandECRSDK.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		5706BD9323FA55370098DD92 /* CoreECR */ = {
-			isa = PBXGroup;
-			children = (
-				570D6D3D24090A9300F4DBE7 /* SBCoreECR.h */,
-				570D6D3C24090A9300F4DBE7 /* SBCoreECR.c */,
-				578324542413605500B6BFA2 /* ECRSrc.c */,
-				578324532413605500B6BFA2 /* ECRSrc.h */,
-				570D6D4F24090AF900F4DBE7 /* Utilities.c */,
-				570D6D4E24090AF900F4DBE7 /* Utilities.h */,
-			);
-			path = CoreECR;
-			sourceTree = "<group>";
-		};
-		573EB95E23F55421006F383D = {
-			isa = PBXGroup;
-			children = (
-				573EB96A23F55421006F383D /* SkyBandECRSDK */,
-				573EB97523F55422006F383D /* SkyBandECRSDKTests */,
-				573EB96923F55421006F383D /* Products */,
-				5763A8CB23F6DA7C00790E94 /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		573EB96923F55421006F383D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				573EB96823F55421006F383D /* SkyBandECRSDK.framework */,
-				573EB97123F55422006F383D /* SkyBandECRSDKTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		573EB96A23F55421006F383D /* SkyBandECRSDK */ = {
-			isa = PBXGroup;
-			children = (
-				573EB96B23F55421006F383D /* SkyBandECRSDK.h */,
-				57E41CAA240E3057007B44A0 /* SKBCoreServices.h */,
-				57E41CAC240E305F007B44A0 /* SKBCoreServices.m */,
-				B10A6A8B24493F54004EA1D1 /* SKBTransactionRecipts */,
-				573EB96C23F55421006F383D /* Info.plist */,
-				5706BD9323FA55370098DD92 /* CoreECR */,
-			);
-			path = SkyBandECRSDK;
-			sourceTree = "<group>";
-		};
-		573EB97523F55422006F383D /* SkyBandECRSDKTests */ = {
-			isa = PBXGroup;
-			children = (
-				573EB97623F55422006F383D /* SkyBandECRSDKTests.m */,
-				573EB97823F55422006F383D /* Info.plist */,
-			);
-			path = SkyBandECRSDKTests;
-			sourceTree = "<group>";
-		};
-		5763A8CB23F6DA7C00790E94 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5763A8D223F6DAC200790E94 /* CFNetwork.framework */,
-				5763A8D023F6DAB900790E94 /* libz.tbd */,
-				5763A8CE23F6DAA900790E94 /* libiconv.tbd */,
-				5763A8CC23F6DA7D00790E94 /* Security.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B10A6A8B24493F54004EA1D1 /* SKBTransactionRecipts */ = {
-			isa = PBXGroup;
-			children = (
-				B147C4E72451E7C900227BA6 /* Purchase(customer_copy).html */,
-				B10A6AA324494015004EA1D1 /* Purchase cashback(customer copy)).html */,
-				B10A6A9224494006004EA1D1 /* Refund(customer_copy).html */,
-				B10A6A9A2449400C004EA1D1 /* Pre-Auth(Customer_copy).html */,
-				B10A6AA024494011004EA1D1 /* Purchase Advice(Customer_copy).html */,
-				B10A6A8C24494000004EA1D1 /* Pre-Extension(Customer_copy).html */,
-				B10A6AA124494012004EA1D1 /* Pre-void(Customer_copy).html */,
-				B18F78A4245AE3EB00D9C040 /* Detail_Report.html */,
-				B10A6A8D24494003004EA1D1 /* Cash_Advance(Customer_copy).html */,
-				B18F78A6245AE5D600D9C040 /* Reversal(Customer_copy).html */,
-				B10A6A9624494007004EA1D1 /* Parameter download.html */,
-				B10A6A9824494009004EA1D1 /* Bill Pyment(Customer_copy).html */,
-				B18F78A2245AE3B200D9C040 /* Reconcilation.html */,
-				B18F78A0245ABBD600D9C040 /* Summary_Report.html */,
-				B18F789E245ABB9600D9C040 /* Summary.html */,
-				B138567E24932959009B2729 /* PosTable.html */,
-				B138567F24932959009B2729 /* ReconcilationTable.html */,
-				B1FC171924AE09250086A297 /* madaHostTable.html */,
-				B1FC171C24AE09260086A297 /* PosTableRunning.html */,
-				B1FC171B24AE09260086A297 /* PosTerminalDetails.html */,
-				B1FC171A24AE09250086A297 /* ReconcilationTable1.html */,
-			);
-			path = SKBTransactionRecipts;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		573EB96323F55421006F383D /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				57E41CAB240E3057007B44A0 /* SKBCoreServices.h in Headers */,
-				570D6D3F24090A9300F4DBE7 /* SBCoreECR.h in Headers */,
-				578324552413605500B6BFA2 /* ECRSrc.h in Headers */,
-				570D6D5024090AF900F4DBE7 /* Utilities.h in Headers */,
-				573EB97923F55422006F383D /* SkyBandECRSDK.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
-/* Begin PBXNativeTarget section */
-		573EB96723F55421006F383D /* SkyBandECRSDK */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 573EB97C23F55422006F383D /* Build configuration list for PBXNativeTarget "SkyBandECRSDK" */;
-			buildPhases = (
-				573EB96323F55421006F383D /* Headers */,
-				573EB96423F55421006F383D /* Sources */,
-				573EB96523F55421006F383D /* Frameworks */,
-				573EB96623F55421006F383D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SkyBandECRSDK;
-			productName = SkyBandECRSDK;
-			productReference = 573EB96823F55421006F383D /* SkyBandECRSDK.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		573EB97023F55422006F383D /* SkyBandECRSDKTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 573EB97F23F55422006F383D /* Build configuration list for PBXNativeTarget "SkyBandECRSDKTests" */;
-			buildPhases = (
-				573EB96D23F55422006F383D /* Sources */,
-				573EB96E23F55422006F383D /* Frameworks */,
-				573EB96F23F55422006F383D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				573EB97423F55422006F383D /* PBXTargetDependency */,
-			);
-			name = SkyBandECRSDKTests;
-			productName = SkyBandECRSDKTests;
-			productReference = 573EB97123F55422006F383D /* SkyBandECRSDKTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		573EB95F23F55421006F383D /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 1130;
-				ORGANIZATIONNAME = GirmitiSoftwares;
-				TargetAttributes = {
-					573EB96723F55421006F383D = {
-						CreatedOnToolsVersion = 11.3.1;
-					};
-					573EB97023F55422006F383D = {
-						CreatedOnToolsVersion = 11.3.1;
-					};
-				};
-			};
-			buildConfigurationList = 573EB96223F55421006F383D /* Build configuration list for PBXProject "SkyBandECRSDK" */;
-			compatibilityVersion = "Xcode 9.3";
-			developmentRegion = en;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = 573EB95E23F55421006F383D;
-			productRefGroup = 573EB96923F55421006F383D /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				573EB96723F55421006F383D /* SkyBandECRSDK */,
-				573EB97023F55422006F383D /* SkyBandECRSDKTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		573EB96623F55421006F383D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B18F78A3245AE3B300D9C040 /* Reconcilation.html in Resources */,
-				B18F78A7245AE5D600D9C040 /* Reversal(Customer_copy).html in Resources */,
-				B18F78A5245AE3EB00D9C040 /* Detail_Report.html in Resources */,
-				B10A6AB824494016004EA1D1 /* Purchase Advice(Customer_copy).html in Resources */,
-				B10A6AAE24494016004EA1D1 /* Parameter download.html in Resources */,
-				B10A6ABB24494016004EA1D1 /* Purchase cashback(customer copy)).html in Resources */,
-				B1FC172024AE09260086A297 /* PosTableRunning.html in Resources */,
-				B147C4E82451E7CA00227BA6 /* Purchase(customer_copy).html in Resources */,
-				B10A6AAA24494016004EA1D1 /* Refund(customer_copy).html in Resources */,
-				B13856812493295A009B2729 /* ReconcilationTable.html in Resources */,
-				B10A6AB924494016004EA1D1 /* Pre-void(Customer_copy).html in Resources */,
-				B18F78A1245ABBD600D9C040 /* Summary_Report.html in Resources */,
-				B13856802493295A009B2729 /* PosTable.html in Resources */,
-				B1FC171D24AE09260086A297 /* madaHostTable.html in Resources */,
-				B10A6AB024494016004EA1D1 /* Bill Pyment(Customer_copy).html in Resources */,
-				B1FC171F24AE09260086A297 /* PosTerminalDetails.html in Resources */,
-				B10A6AA524494016004EA1D1 /* Cash_Advance(Customer_copy).html in Resources */,
-				B10A6AB224494016004EA1D1 /* Pre-Auth(Customer_copy).html in Resources */,
-				B1FC171E24AE09260086A297 /* ReconcilationTable1.html in Resources */,
-				B10A6AA424494016004EA1D1 /* Pre-Extension(Customer_copy).html in Resources */,
-				B18F789F245ABB9600D9C040 /* Summary.html in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		573EB96F23F55422006F383D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		573EB96423F55421006F383D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				570D6D5124090AF900F4DBE7 /* Utilities.c in Sources */,
-				57E41CAD240E305F007B44A0 /* SKBCoreServices.m in Sources */,
-				570D6D3E24090A9300F4DBE7 /* SBCoreECR.c in Sources */,
-				578324562413605500B6BFA2 /* ECRSrc.c in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		573EB96D23F55422006F383D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				573EB97723F55422006F383D /* SkyBandECRSDKTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		573EB97423F55422006F383D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 573EB96723F55421006F383D /* SkyBandECRSDK */;
-			targetProxy = 573EB97323F55422006F383D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin XCBuildConfiguration section */
-		573EB97A23F55422006F383D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		573EB97B23F55422006F383D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		573EB97D23F55422006F383D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BITCODE_GENERATION_MODE = bitcode;
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 3A54Q99JBM;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SkyBandECRSDK/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CFLAGS = "-fembed-bitcode";
-				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Com.GirmitiSoftwares.SkyBandECRSDK;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		573EB97E23F55422006F383D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BITCODE_GENERATION_MODE = bitcode;
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 3A54Q99JBM;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SkyBandECRSDK/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				OTHER_CFLAGS = "-fembed-bitcode";
-				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Com.GirmitiSoftwares.SkyBandECRSDK;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		573EB98023F55422006F383D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3A54Q99JBM;
-				INFOPLIST_FILE = SkyBandECRSDKTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = Com.GirmitiSoftwares.SkyBandECRSDKTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		573EB98123F55422006F383D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3A54Q99JBM;
-				INFOPLIST_FILE = SkyBandECRSDKTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = Com.GirmitiSoftwares.SkyBandECRSDKTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		573EB96223F55421006F383D /* Build configuration list for PBXProject "SkyBandECRSDK" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				573EB97A23F55422006F383D /* Debug */,
-				573EB97B23F55422006F383D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		573EB97C23F55422006F383D /* Build configuration list for PBXNativeTarget "SkyBandECRSDK" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				573EB97D23F55422006F383D /* Debug */,
-				573EB97E23F55422006F383D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		573EB97F23F55422006F383D /* Build configuration list for PBXNativeTarget "SkyBandECRSDKTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				573EB98023F55422006F383D /* Debug */,
-				573EB98123F55422006F383D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 573EB95F23F55421006F383D /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>50</string>
+	<key>objects</key>
+	<dict>
+		<key>5706BD9323FA55370098DD92</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>570D6D3D24090A9300F4DBE7</string>
+				<string>570D6D3C24090A9300F4DBE7</string>
+				<string>578324542413605500B6BFA2</string>
+				<string>578324532413605500B6BFA2</string>
+				<string>570D6D4F24090AF900F4DBE7</string>
+				<string>570D6D4E24090AF900F4DBE7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>CoreECR</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>570D6D3C24090A9300F4DBE7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.c</string>
+			<key>path</key>
+			<string>SBCoreECR.c</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>570D6D3D24090A9300F4DBE7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SBCoreECR.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>570D6D3E24090A9300F4DBE7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>570D6D3C24090A9300F4DBE7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>570D6D3F24090A9300F4DBE7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>570D6D3D24090A9300F4DBE7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>570D6D4E24090AF900F4DBE7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Utilities.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>570D6D4F24090AF900F4DBE7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.c</string>
+			<key>path</key>
+			<string>Utilities.c</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>570D6D5024090AF900F4DBE7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>570D6D4E24090AF900F4DBE7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>570D6D5124090AF900F4DBE7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>570D6D4F24090AF900F4DBE7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>573EB95E23F55421006F383D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>573EB96A23F55421006F383D</string>
+				<string>573EB97523F55422006F383D</string>
+				<string>573EB96923F55421006F383D</string>
+				<string>5763A8CB23F6DA7C00790E94</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>573EB95F23F55421006F383D</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>1130</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>GirmitiSoftwares</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>573EB96723F55421006F383D</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>11.3.1</string>
+					</dict>
+					<key>573EB97023F55422006F383D</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>11.3.1</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>573EB96223F55421006F383D</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 9.3</string>
+			<key>developmentRegion</key>
+			<string>en</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>573EB95E23F55421006F383D</string>
+			<key>productRefGroup</key>
+			<string>573EB96923F55421006F383D</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>573EB96723F55421006F383D</string>
+				<string>573EB97023F55422006F383D</string>
+			</array>
+		</dict>
+		<key>573EB96223F55421006F383D</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>573EB97A23F55422006F383D</string>
+				<string>573EB97B23F55422006F383D</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>573EB96323F55421006F383D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>57E41CAB240E3057007B44A0</string>
+				<string>570D6D3F24090A9300F4DBE7</string>
+				<string>578324552413605500B6BFA2</string>
+				<string>570D6D5024090AF900F4DBE7</string>
+				<string>573EB97923F55422006F383D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>573EB96423F55421006F383D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>570D6D5124090AF900F4DBE7</string>
+				<string>57E41CAD240E305F007B44A0</string>
+				<string>570D6D3E24090A9300F4DBE7</string>
+				<string>578324562413605500B6BFA2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>573EB96523F55421006F383D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>5763A8D323F6DAC200790E94</string>
+				<string>5763A8D123F6DAB900790E94</string>
+				<string>5763A8CF23F6DAA900790E94</string>
+				<string>5763A8CD23F6DA7D00790E94</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>573EB96623F55421006F383D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>B18F78A3245AE3B300D9C040</string>
+				<string>B18F78A7245AE5D600D9C040</string>
+				<string>B18F78A5245AE3EB00D9C040</string>
+				<string>B10A6AB824494016004EA1D1</string>
+				<string>B10A6AAE24494016004EA1D1</string>
+				<string>B10A6ABB24494016004EA1D1</string>
+				<string>B1FC172024AE09260086A297</string>
+				<string>B147C4E82451E7CA00227BA6</string>
+				<string>B10A6AAA24494016004EA1D1</string>
+				<string>B13856812493295A009B2729</string>
+				<string>B10A6AB924494016004EA1D1</string>
+				<string>B18F78A1245ABBD600D9C040</string>
+				<string>B13856802493295A009B2729</string>
+				<string>B1FC171D24AE09260086A297</string>
+				<string>B10A6AB024494016004EA1D1</string>
+				<string>B1FC171F24AE09260086A297</string>
+				<string>B10A6AA524494016004EA1D1</string>
+				<string>B10A6AB224494016004EA1D1</string>
+				<string>B1FC171E24AE09260086A297</string>
+				<string>B10A6AA424494016004EA1D1</string>
+				<string>B18F789F245ABB9600D9C040</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>573EB96723F55421006F383D</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>573EB97C23F55422006F383D</string>
+			<key>buildPhases</key>
+			<array>
+				<string>573EB96323F55421006F383D</string>
+				<string>573EB96423F55421006F383D</string>
+				<string>573EB96523F55421006F383D</string>
+				<string>573EB96623F55421006F383D</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>SkyBandECRSDK</string>
+			<key>productName</key>
+			<string>SkyBandECRSDK</string>
+			<key>productReference</key>
+			<string>573EB96823F55421006F383D</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>573EB96823F55421006F383D</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>SkyBandECRSDK.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>573EB96923F55421006F383D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>573EB96823F55421006F383D</string>
+				<string>573EB97123F55422006F383D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>573EB96A23F55421006F383D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>573EB96B23F55421006F383D</string>
+				<string>57E41CAA240E3057007B44A0</string>
+				<string>57E41CAC240E305F007B44A0</string>
+				<string>B10A6A8B24493F54004EA1D1</string>
+				<string>573EB96C23F55421006F383D</string>
+				<string>5706BD9323FA55370098DD92</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>SkyBandECRSDK</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>573EB96B23F55421006F383D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SkyBandECRSDK.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>573EB96C23F55421006F383D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>573EB96D23F55422006F383D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>573EB97723F55422006F383D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>573EB96E23F55422006F383D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>573EB97223F55422006F383D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>573EB96F23F55422006F383D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>573EB97023F55422006F383D</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>573EB97F23F55422006F383D</string>
+			<key>buildPhases</key>
+			<array>
+				<string>573EB96D23F55422006F383D</string>
+				<string>573EB96E23F55422006F383D</string>
+				<string>573EB96F23F55422006F383D</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>573EB97423F55422006F383D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>SkyBandECRSDKTests</string>
+			<key>productName</key>
+			<string>SkyBandECRSDKTests</string>
+			<key>productReference</key>
+			<string>573EB97123F55422006F383D</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>573EB97123F55422006F383D</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>SkyBandECRSDKTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>573EB97223F55422006F383D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>573EB96823F55421006F383D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>573EB97323F55422006F383D</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>573EB95F23F55421006F383D</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>573EB96723F55421006F383D</string>
+			<key>remoteInfo</key>
+			<string>SkyBandECRSDK</string>
+		</dict>
+		<key>573EB97423F55422006F383D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>573EB96723F55421006F383D</string>
+			<key>targetProxy</key>
+			<string>573EB97323F55422006F383D</string>
+		</dict>
+		<key>573EB97523F55422006F383D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>573EB97623F55422006F383D</string>
+				<string>573EB97823F55422006F383D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>SkyBandECRSDKTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>573EB97623F55422006F383D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SkyBandECRSDKTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>573EB97723F55422006F383D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>573EB97623F55422006F383D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>573EB97823F55422006F383D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>573EB97923F55422006F383D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>573EB96B23F55421006F383D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>573EB97A23F55422006F383D</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++14</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_WEAK</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_COMMA</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_DOCUMENTATION_COMMENTS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INFINITE_RECURSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_NON_LITERAL_NULL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_LITERAL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_RANGE_LOOP_ANALYSIS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_STRICT_PROTOTYPES</key>
+				<string>YES</string>
+				<key>CLANG_WARN_SUSPICIOUS_MOVE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNGUARDED_AVAILABILITY</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>ENABLE_TESTABILITY</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu11</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>10.0</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>INCLUDE_SOURCE</string>
+				<key>MTL_FAST_MATH</key>
+				<string>YES</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>573EB97B23F55422006F383D</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++14</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_WEAK</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_COMMA</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_DOCUMENTATION_COMMENTS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INFINITE_RECURSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_NON_LITERAL_NULL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_LITERAL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_RANGE_LOOP_ANALYSIS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_STRICT_PROTOTYPES</key>
+				<string>YES</string>
+				<key>CLANG_WARN_SUSPICIOUS_MOVE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNGUARDED_AVAILABILITY</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu11</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>10.0</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>MTL_FAST_MATH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>573EB97C23F55422006F383D</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>573EB97D23F55422006F383D</string>
+				<string>573EB97E23F55422006F383D</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>573EB97D23F55422006F383D</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BITCODE_GENERATION_MODE</key>
+				<string>bitcode</string>
+				<key>CODE_SIGN_STYLE</key>
+				<string>Automatic</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DEVELOPMENT_TEAM</key>
+				<string>3A54Q99JBM</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>INFOPLIST_FILE</key>
+				<string>SkyBandECRSDK/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>10.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>NO</string>
+				<key>OTHER_CFLAGS</key>
+				<string>-fembed-bitcode</string>
+				<key>OTHER_LDFLAGS</key>
+				<string>$(inherited)</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>Com.GirmitiSoftwares.SkyBandECRSDK</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME:c99extidentifier)</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>573EB97E23F55422006F383D</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BITCODE_GENERATION_MODE</key>
+				<string>bitcode</string>
+				<key>CODE_SIGN_STYLE</key>
+				<string>Automatic</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DEVELOPMENT_TEAM</key>
+				<string>3A54Q99JBM</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>INFOPLIST_FILE</key>
+				<string>SkyBandECRSDK/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>10.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>OTHER_CFLAGS</key>
+				<string>-fembed-bitcode</string>
+				<key>OTHER_LDFLAGS</key>
+				<string>$(inherited)</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>Com.GirmitiSoftwares.SkyBandECRSDK</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME:c99extidentifier)</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>573EB97F23F55422006F383D</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>573EB98023F55422006F383D</string>
+				<string>573EB98123F55422006F383D</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>573EB98023F55422006F383D</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_STYLE</key>
+				<string>Automatic</string>
+				<key>DEVELOPMENT_TEAM</key>
+				<string>3A54Q99JBM</string>
+				<key>INFOPLIST_FILE</key>
+				<string>SkyBandECRSDKTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>Com.GirmitiSoftwares.SkyBandECRSDKTests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>573EB98123F55422006F383D</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_STYLE</key>
+				<string>Automatic</string>
+				<key>DEVELOPMENT_TEAM</key>
+				<string>3A54Q99JBM</string>
+				<key>INFOPLIST_FILE</key>
+				<string>SkyBandECRSDKTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>Com.GirmitiSoftwares.SkyBandECRSDKTests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>5763A8CB23F6DA7C00790E94</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>5763A8D223F6DAC200790E94</string>
+				<string>5763A8D023F6DAB900790E94</string>
+				<string>5763A8CE23F6DAA900790E94</string>
+				<string>5763A8CC23F6DA7D00790E94</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5763A8CC23F6DA7D00790E94</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Security.framework</string>
+			<key>path</key>
+			<string>Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Security.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>5763A8CD23F6DA7D00790E94</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5763A8CC23F6DA7D00790E94</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5763A8CE23F6DAA900790E94</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.text-based-dylib-definition</string>
+			<key>name</key>
+			<string>libiconv.tbd</string>
+			<key>path</key>
+			<string>Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/libiconv.tbd</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>5763A8CF23F6DAA900790E94</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5763A8CE23F6DAA900790E94</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5763A8D023F6DAB900790E94</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.text-based-dylib-definition</string>
+			<key>name</key>
+			<string>libz.tbd</string>
+			<key>path</key>
+			<string>Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/libz.tbd</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>5763A8D123F6DAB900790E94</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5763A8D023F6DAB900790E94</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5763A8D223F6DAC200790E94</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CFNetwork.framework</string>
+			<key>path</key>
+			<string>Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CFNetwork.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>5763A8D323F6DAC200790E94</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5763A8D223F6DAC200790E94</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>578324532413605500B6BFA2</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>ECRSrc.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>578324542413605500B6BFA2</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.c</string>
+			<key>path</key>
+			<string>ECRSrc.c</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>578324552413605500B6BFA2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>578324532413605500B6BFA2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>578324562413605500B6BFA2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>578324542413605500B6BFA2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>57E41CAA240E3057007B44A0</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SKBCoreServices.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>57E41CAB240E3057007B44A0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>57E41CAA240E3057007B44A0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>57E41CAC240E305F007B44A0</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SKBCoreServices.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>57E41CAD240E305F007B44A0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>57E41CAC240E305F007B44A0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B10A6A8B24493F54004EA1D1</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B147C4E72451E7C900227BA6</string>
+				<string>B10A6AA324494015004EA1D1</string>
+				<string>B10A6A9224494006004EA1D1</string>
+				<string>B10A6A9A2449400C004EA1D1</string>
+				<string>B10A6AA024494011004EA1D1</string>
+				<string>B10A6A8C24494000004EA1D1</string>
+				<string>B10A6AA124494012004EA1D1</string>
+				<string>B18F78A4245AE3EB00D9C040</string>
+				<string>B10A6A8D24494003004EA1D1</string>
+				<string>B18F78A6245AE5D600D9C040</string>
+				<string>B10A6A9624494007004EA1D1</string>
+				<string>B10A6A9824494009004EA1D1</string>
+				<string>B18F78A2245AE3B200D9C040</string>
+				<string>B18F78A0245ABBD600D9C040</string>
+				<string>B18F789E245ABB9600D9C040</string>
+				<string>B138567E24932959009B2729</string>
+				<string>B138567F24932959009B2729</string>
+				<string>B1FC171924AE09250086A297</string>
+				<string>B1FC171C24AE09260086A297</string>
+				<string>B1FC171B24AE09260086A297</string>
+				<string>B1FC171A24AE09250086A297</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>SKBTransactionRecipts</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B10A6A8C24494000004EA1D1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.html</string>
+			<key>path</key>
+			<string>Pre-Extension(Customer_copy).html</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B10A6A8D24494003004EA1D1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.html</string>
+			<key>path</key>
+			<string>Cash_Advance(Customer_copy).html</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B10A6A9224494006004EA1D1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.html</string>
+			<key>path</key>
+			<string>Refund(customer_copy).html</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B10A6A9624494007004EA1D1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.html</string>
+			<key>path</key>
+			<string>Parameter download.html</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B10A6A9824494009004EA1D1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.html</string>
+			<key>path</key>
+			<string>Bill Pyment(Customer_copy).html</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B10A6A9A2449400C004EA1D1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.html</string>
+			<key>path</key>
+			<string>Pre-Auth(Customer_copy).html</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B10A6AA024494011004EA1D1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.html</string>
+			<key>path</key>
+			<string>Purchase Advice(Customer_copy).html</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B10A6AA124494012004EA1D1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.html</string>
+			<key>path</key>
+			<string>Pre-void(Customer_copy).html</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B10A6AA324494015004EA1D1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.html</string>
+			<key>path</key>
+			<string>Purchase cashback(customer copy)).html</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B10A6AA424494016004EA1D1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B10A6A8C24494000004EA1D1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B10A6AA524494016004EA1D1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B10A6A8D24494003004EA1D1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B10A6AAA24494016004EA1D1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B10A6A9224494006004EA1D1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B10A6AAE24494016004EA1D1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B10A6A9624494007004EA1D1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B10A6AB024494016004EA1D1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B10A6A9824494009004EA1D1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B10A6AB224494016004EA1D1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B10A6A9A2449400C004EA1D1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B10A6AB824494016004EA1D1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B10A6AA024494011004EA1D1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B10A6AB924494016004EA1D1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B10A6AA124494012004EA1D1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B10A6ABB24494016004EA1D1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B10A6AA324494015004EA1D1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B138567E24932959009B2729</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.html</string>
+			<key>path</key>
+			<string>PosTable.html</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B138567F24932959009B2729</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.html</string>
+			<key>path</key>
+			<string>ReconcilationTable.html</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B13856802493295A009B2729</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B138567E24932959009B2729</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B13856812493295A009B2729</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B138567F24932959009B2729</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B147C4E72451E7C900227BA6</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.html</string>
+			<key>path</key>
+			<string>Purchase(customer_copy).html</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B147C4E82451E7CA00227BA6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B147C4E72451E7C900227BA6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B18F789E245ABB9600D9C040</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.html</string>
+			<key>path</key>
+			<string>Summary.html</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B18F789F245ABB9600D9C040</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B18F789E245ABB9600D9C040</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B18F78A0245ABBD600D9C040</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.html</string>
+			<key>path</key>
+			<string>Summary_Report.html</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B18F78A1245ABBD600D9C040</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B18F78A0245ABBD600D9C040</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B18F78A2245AE3B200D9C040</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.html</string>
+			<key>path</key>
+			<string>Reconcilation.html</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B18F78A3245AE3B300D9C040</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B18F78A2245AE3B200D9C040</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B18F78A4245AE3EB00D9C040</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.html</string>
+			<key>path</key>
+			<string>Detail_Report.html</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B18F78A5245AE3EB00D9C040</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B18F78A4245AE3EB00D9C040</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B18F78A6245AE5D600D9C040</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.html</string>
+			<key>path</key>
+			<string>Reversal(Customer_copy).html</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B18F78A7245AE5D600D9C040</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B18F78A6245AE5D600D9C040</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B1FC171924AE09250086A297</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.html</string>
+			<key>path</key>
+			<string>madaHostTable.html</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B1FC171A24AE09250086A297</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.html</string>
+			<key>path</key>
+			<string>ReconcilationTable1.html</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B1FC171B24AE09260086A297</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.html</string>
+			<key>path</key>
+			<string>PosTerminalDetails.html</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B1FC171C24AE09260086A297</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.html</string>
+			<key>path</key>
+			<string>PosTableRunning.html</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B1FC171D24AE09260086A297</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B1FC171924AE09250086A297</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B1FC171E24AE09260086A297</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B1FC171A24AE09250086A297</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B1FC171F24AE09260086A297</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B1FC171B24AE09260086A297</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B1FC172024AE09260086A297</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B1FC171C24AE09260086A297</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>573EB95F23F55421006F383D</string>
+</dict>
+</plist>

@@ -2,9 +2,17 @@
 # To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html.
 # Run `pod lib lint skyband_ecr_plugin.podspec` to validate before publishing.
 #
-require 'yaml'
-pubspec = YAML.load_file(File.join('..', '..', 'pubspec.yaml'))
-version = pubspec['version']
+
+# Safely try to get version from pubspec.yaml, with fallback
+begin
+  require 'yaml'
+  pubspec_path = File.join(__dir__, '..', 'pubspec.yaml')
+  pubspec = YAML.load_file(pubspec_path)
+  version = pubspec['version']
+rescue => e
+  # Fallback if pubspec.yaml cannot be read
+  version = '0.0.1'
+end
 
 Pod::Spec.new do |s|
   s.name             = 'skyband_ecr_plugin'
