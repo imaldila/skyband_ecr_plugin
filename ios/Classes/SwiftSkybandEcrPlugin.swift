@@ -53,7 +53,7 @@ class SKBCoreServices: NSObject {
     }
 }
 
-// Stub protocol for simulator
+// Simulator stub for SocketConnectionDelegate
 protocol SocketConnectionDelegate: AnyObject {
     func socketConnectionStream(_ connection: SKBCoreServices!, didReceiveData responseData: NSMutableDictionary!)
     func socketConnectionStreamDidFail(toConnect connection: SKBCoreServices!)
@@ -67,6 +67,7 @@ import SkyBandECRSDK
 public class SwiftSkybandEcrPlugin: NSObject, FlutterPlugin {
     private var coreServices: SKBCoreServices?
     private var eventSink: FlutterEventSink?
+    private var paymentResult: FlutterResult?
     
     public static func register(with registrar: FlutterPluginRegistrar) {
         let channel = FlutterMethodChannel(name: "skyband_ecr_plugin", binaryMessenger: registrar.messenger())
@@ -194,14 +195,25 @@ public class SwiftSkybandEcrPlugin: NSObject, FlutterPlugin {
         self.paymentResult = result
         #endif
     }
+}
+
+// MARK: - FlutterStreamHandler
+
+extension SwiftSkybandEcrPlugin: FlutterStreamHandler {
+    public func onListen(withArguments arguments: Any?, eventSink events: @escaping FlutterEventSink) -> FlutterError? {
+        eventSink = events
+        return nil
+    }
     
-    #if SIMULATOR
-    // Mock implementation for simulator
-    private var paymentResult: FlutterResult?
-    #else
-    // MARK: - SocketConnectionDelegate
-    private var paymentResult: FlutterResult?
-    
+    public func onCancel(withArguments arguments: Any?) -> FlutterError? {
+        eventSink = nil
+        return nil
+    }
+}
+
+#if !SIMULATOR
+// Only implement SocketConnectionDelegate for real device builds
+extension SwiftSkybandEcrPlugin: SocketConnectionDelegate {
     public func socketConnectionStream(_ connection: SKBCoreServices!, didReceiveData responseData: NSMutableDictionary!) {
         if let result = paymentResult {
             result(responseData as? [String: Any])
@@ -223,19 +235,5 @@ public class SwiftSkybandEcrPlugin: NSObject, FlutterPlugin {
     public func socketConnectionStreamDidDisconnect(_ connection: SKBCoreServices!, willReconnectAutomatically: Bool) {
         eventSink?(["status": "disconnected", "willReconnect": willReconnectAutomatically])
     }
-    #endif
 }
-
-// MARK: - FlutterStreamHandler
-
-extension SwiftSkybandEcrPlugin: FlutterStreamHandler {
-    public func onListen(withArguments arguments: Any?, eventSink events: @escaping FlutterEventSink) -> FlutterError? {
-        eventSink = events
-        return nil
-    }
-    
-    public func onCancel(withArguments arguments: Any?) -> FlutterError? {
-        eventSink = nil
-        return nil
-    }
-} 
+#endif 

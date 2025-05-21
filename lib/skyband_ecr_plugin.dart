@@ -20,7 +20,7 @@ class SkybandEcrPlugin {
   // Initialize the plugin
   Future<void> initialize() async {
     try {
-      await _channel.invokeMethod('initialize');
+      await _channel.invokeMethod('initEcr');
       _eventChannel.receiveBroadcastStream().listen((event) {
         _deviceStatusController.add(Map<String, dynamic>.from(event));
       });
@@ -99,6 +99,25 @@ class SkybandEcrPlugin {
       return version;
     } catch (e) {
       throw Exception('Failed to get platform version: $e');
+    }
+  }
+
+  // Perform direct transaction
+  Future<Map<String, dynamic>> performTransaction({
+    required String amount,
+    required String terminalId,
+    required String transactionType,
+  }) async {
+    try {
+      final Map<dynamic, dynamic> result =
+          await _channel.invokeMethod('performTransaction', {
+        'amount': amount,
+        'terminalId': terminalId,
+        'transactionType': transactionType,
+      });
+      return Map<String, dynamic>.from(result);
+    } catch (e) {
+      throw Exception('Failed to perform transaction: $e');
     }
   }
 }
