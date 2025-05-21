@@ -2,7 +2,7 @@ import Flutter
 import UIKit
 import SkyBandECRSDK
 
-public class SwiftSkybandEcrPlugin: NSObject, FlutterPlugin, SKBCoreServicesDelegate {
+public class SwiftSkybandEcrPlugin: NSObject, FlutterPlugin, SocketConnectionDelegate {
     private var coreServices: SKBCoreServices?
     private var eventSink: FlutterEventSink?
     
@@ -78,31 +78,41 @@ public class SwiftSkybandEcrPlugin: NSObject, FlutterPlugin, SKBCoreServicesDele
         
         let request = "\(dateFormat);\(amount);\(printReceipt);\(ecrRefNum)!"
         coreServices?.doTCPIPTransaction(
-            coreServices?.ipAddress,
+            coreServices?.ipAdress,
             portNumber: coreServices?.portNumber ?? 0,
             requestData: request,
             transactionType: Int32(transactionType),
-            signature: signature
+            signature: signature ? "true" : "false"
         )
         
         // Store the result callback to be called when the payment is complete
         self.paymentResult = result
     }
     
-    // MARK: - SKBCoreServicesDelegate
+    // MARK: - SocketConnectionDelegate
     
     private var paymentResult: FlutterResult?
     
-    public func socketConnectionStream(_ connection: SKBCoreServices!, didReceiveData responseData: Data!) {
+    public func socketConnectionStream(_ connection: SKBCoreServices!, didReceiveData responseData: NSMutableDictionary!) {
         if let result = paymentResult {
-            let response = String(data: responseData, encoding: .utf8) ?? ""
-            result(["response": response])
+            result(responseData as? [String: Any])
             paymentResult = nil
         }
+        
+        // Also update the event sink if needed
+        eventSink?(["response": responseData])
     }
     
     public func socketConnectionStreamDidFail(toConnect connection: SKBCoreServices!) {
         eventSink?(["status": "disconnected"])
+    }
+    
+    public func socketConnectionStreamDidConnect(_ connection: SKBCoreServices!) {
+        eventSink?(["status": "connected"])
+    }
+    
+    public func socketConnectionStreamDidDisconnect(_ connection: SKBCoreServices!, willReconnectAutomatically: Bool) {
+        eventSink?(["status": "disconnected", "willReconnect": willReconnectAutomatically])
     }
 }
 
