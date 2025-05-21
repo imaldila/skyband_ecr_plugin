@@ -3,7 +3,7 @@ import UIKit
 
 #if SIMULATOR
 // Simulator stub for SKBCoreServices that matches the real SDK method names
-class SKBCoreServices: NSObject {
+public class SKBCoreServices: NSObject {
     static func shareInstance() -> SKBCoreServices {
         return SKBCoreServices()
     }
@@ -82,7 +82,7 @@ class SKBCoreServices: NSObject {
 }
 
 // Simulator stub for SocketConnectionDelegate that matches the real protocol
-@objc protocol SocketConnectionDelegate: AnyObject {
+@objc public protocol SocketConnectionDelegate: AnyObject {
     @objc optional func socketConnectionStream(_ connection: SKBCoreServices, didReceiveData responseData: NSMutableDictionary)
     @objc optional func socketConnectionStreamDidConnect(_ connection: SKBCoreServices)
     @objc optional func socketConnectionStreamDidDisconnect(_ connection: SKBCoreServices, willReconnectAutomatically: Bool)
@@ -288,7 +288,7 @@ extension SwiftSkybandEcrPlugin {
     // For simulator builds, we need these to be marked with @objc and be optional
     // For real device builds, these match the actual SDK methods
     
-    @objc func socketConnectionStream(_ connection: SKBCoreServices, didReceiveData responseData: NSMutableDictionary) {
+    @objc public func socketConnectionStream(_ connection: SKBCoreServices, didReceiveData responseData: NSMutableDictionary) {
         if let result = paymentResult {
             result(responseData as? [String: Any])
             paymentResult = nil
@@ -298,19 +298,19 @@ extension SwiftSkybandEcrPlugin {
         eventSink?(["response": responseData])
     }
     
-    @objc func socketConnectionStreamDidFailToConnect(_ connection: SKBCoreServices) {
+    @objc public func socketConnectionStreamDidFailToConnect(_ connection: SKBCoreServices) {
         eventSink?(["status": "disconnected"])
     }
     
-    @objc  func socketConnectionStreamDidConnect(_ connection: SKBCoreServices) {
+    @objc public func socketConnectionStreamDidConnect(_ connection: SKBCoreServices) {
         eventSink?(["status": "connected"])
     }
     
-    @objc  func socketConnectionStreamDidDisconnect(_ connection: SKBCoreServices, willReconnectAutomatically: Bool) {
+    @objc public func socketConnectionStreamDidDisconnect(_ connection: SKBCoreServices, willReconnectAutomatically: Bool) {
         eventSink?(["status": "disconnected", "willReconnect": willReconnectAutomatically])
     }
     
-    @objc  func socketConnectionStream(_ connection: SKBCoreServices, didSendString string: String) {
+    @objc public func socketConnectionStream(_ connection: SKBCoreServices, didSendString string: String) {
         // Optional method implementation
         print("Did send string: \(string)")
     }
