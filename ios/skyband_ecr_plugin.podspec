@@ -21,11 +21,14 @@ A Flutter plugin for integrating SkyBand ECR devices.
   # Flutter.framework does not contain a i386 slice.
   s.pod_target_xcconfig = { 
     'DEFINES_MODULE' => 'YES', 
-    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386 arm64 x86_64',
-    'VALID_ARCHS[sdk=iphonesimulator*]' => '' 
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386 arm64',
+    'VALID_ARCHS' => 'arm64 x86_64',
+    'OTHER_LDFLAGS[sdk=iphoneos*]' => '-framework SkyBandECRSDK',
+    'SWIFT_ACTIVE_COMPILATION_CONDITIONS[sdk=iphonesimulator*]' => 'SIMULATOR'
   }
+  
   s.user_target_xcconfig = { 
-    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386 arm64 x86_64'
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386 arm64'
   }
   s.swift_version = '5.0'
 
@@ -35,5 +38,9 @@ A Flutter plugin for integrating SkyBand ECR devices.
   # see https://developer.apple.com/documentation/bundleresources/privacy_manifest_files
   # s.resource_bundles = {'skyband_ecr_plugin_privacy' => ['Resources/PrivacyInfo.xcprivacy']}
 
+  s.preserve_paths = 'Frameworks/SkyBandECRSDK/SkyBandECRSDK.framework'
+  
+  # Only include the framework for device builds
   s.vendored_frameworks = 'Frameworks/SkyBandECRSDK/SkyBandECRSDK.framework'
+  s.frameworks = 'UIKit', 'Foundation'
 end
